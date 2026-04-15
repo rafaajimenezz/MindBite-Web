@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindBite | Potencia tu estudio</title>
+    <style>
+        /* Paleta de colores basada en tu diseño */
+        :root {
+            --bg-dark: #120424;
+            --purple-glow: #6a2c91;
+            --gold-accent: #d4af37;
+            --text-light: #f4f4f9;
+            --card-bg: rgba(25, 6, 45, 0.8);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            background-image: radial-gradient(circle at top, #2a0b4d 0%, var(--bg-dark) 60%);
+            min-height: 100vh;
+        }
+
+        /* HERO SECTION (Portada Inicial) */
+        .hero {
+            text-align: center;
+            padding: 2rem;
+            border-bottom: 2px solid var(--purple-glow);
+            box-shadow: 0 4px 20px rgba(106, 44, 145, 0.3);
+        }
+
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .hero h1 {
+            display: none; 
+        }
+
+        /* VIDEO SECTION */
+        .video-container {
+            max-width: 800px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+            text-align: center;
+        }
+
+        .video-container video {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+            border: 1px solid var(--purple-glow);
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--gold-accent);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* PRODUCTS SECTION */
+        .products {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid var(--purple-glow);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(106, 44, 145, 0.5);
+        }
+
+        .product-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .product-title {
+            color: var(--text-light);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .product-desc {
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+            color: #d1c4e9;
+        }
+
+        .product-highlight {
+            font-style: italic;
+            color: #b39ddb;
+            margin-top: 1rem;
+            display: block;
+        }
+
+        .tags {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--gold-accent);
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            border: 1px solid var(--gold-accent);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #7e57c2;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="hero">
+        <h1>MindBite - Potencia tu estudio</h1>
+        <img src="portada.png" alt="MindBite - Portada">
+    </header>
+
+    <section class="video-container">
+        <h2 class="section-title">Descubre nuestra línea</h2>
+        <video controls autoplay muted loop>
+            <source src="Video_Listo_Energy_Bite_y_Brain_Archive.mp4" type="video/mp4">
+            Tu navegador no soporta la reproducción de videos MPEG-4.
+        </video>
+    </section>
+
+    <section class="products">
+        
+        <div class="product-card">
+            <img src="gominolas.png" alt="Energy Bite" class="product-image">
+            <h3 class="product-title">Energy Bite</h3>
+            <p class="product-desc">Energía inmediata cuando más lo necesitas. Con jalea real y cafeína de absorción rápida.</p>
+            <span class="product-highlight">Sabor que sí querrás repetir.</span>
+        </div>
+
+        <div class="product-card">
+            <img src="vaso_polvo.png" alt="Focus Powder" class="product-image">
+            <h3 class="product-title">Focus Powder</h3>
+            <p class="product-desc">Hidratación y concentración profunda para largas jornadas de estudio.</p>
+            <span class="product-highlight">Y también después de una noche intensa.</span>
+            <div class="tags">
+                <span class="tag">Neutro</span>
+                <span class="tag">Cítrico</span>
+                <span class="tag">Menta</span>
+            </div>
+        </div>
+
+        <div class="product-card">
+            <img src="bote_pastillas.png" alt="Brain Archive" class="product-image">
+            <h3 class="product-title">Brain Archive</h3>
+            <p class="product-desc">Memoria y salud cognitiva en formato premium.</p>
+            <span class="product-highlight">Para periodos de exámenes finales de uso intensivo.</span>
+        </div>
+
+    </section>
+
+    <footer>
+        <p>&copy; 2026 MindBite. Tu mente es tu mayor ventaja.</p>
+    </footer>
+
+</body>
+</html>
